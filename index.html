@@ -7,31 +7,46 @@
     <!-- CSS links for Footer, Header, Index.css -->
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/header.css">
     <!-- Add bootstrap link here -->
 </head>
 <body class="mash-page">
+
+    <!-- Header Section -->
     <header class="header-background">
         <nav>
-            <!-- Add logo to the top left of the page -->
+            <!-- Logo -->
             <div class="logo-container">
-                <a href="index.html"><img src="path/to/logo.png" alt="M.A.S.H logo"></a>
+                <a href="index.html"><img src="" alt="M.A.S.H logo"></a>
             </div>
-            <ul>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="./pages/instructions.html">Instructions</a></li>
                 <li><a href="./pages/game.html">Play Now</a></li>
                 <li><a href="./pages/contact.html">Contact</a></li>
             </ul>
+    
+            <!-- Right side -->
+            <div class="header-right">
+                <p>Your Fun Tagline Here!</p>
+            </div>
         </nav>
-        <div class="header-content">
-            <h1>M.A.S.H</h1>
-            <p>Mansion Apartment Shack House</p>
-        </div>
-        <div>
+    </header>
+
+<!-- Main Content Section -->
+<main class="mash-page">
+    <div class="main-content">
+        <h1>M.A.S.H</h1>
+        <p>Mansion Apartment Shack House</p>
+        <div class="game-controls">
             <button id="startGame-btn" type="button" aria-label="Start Game">Start Game!</button>
             <button id="tutorial-btn" type="button" aria-label="Learn How to Play">Learn How to Play</button>
         </div>
-    </header>
+    </div>
+</main>
+
 
     <footer>
         <!-- Logo to left side -->

@@ -1,3 +1,45 @@
 /*
     I want this to be taking care of the logo in each page as well as the navigation
 */
+.header-background {
+    background-color: #f8f9fa; /* Light shade for uniformity */
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items */
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.nav-links {
+    flex: 2; /* Adjust to center navigation */
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Default text color */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.nav-links a:hover {
+    color: #00aced; /* Hover color */
+}
+
+.header-right {
+    flex: 1; /* Optional: adjust space as needed */
+    text-align: right; /* Align to the right */
+    color: #333; /* Adjust text color */
+}

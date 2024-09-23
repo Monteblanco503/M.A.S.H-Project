@@ -1,82 +1,41 @@
-/* Custom styles for the MASH game page 
-.mash-page {
+.mash-page{
     padding-top: 60px;
+    background-color: #fff;
 }
-
-.header-background {
-    padding: 20px;
-    background-color: #f8f9fa;
+.main-content{
     text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
-
-.header-content {
-    max-width: 1000px;
-    font-size: xx-large;
-}
-.header-content h1 {
-    font-family: 'Bubblegum Sans', cursive;
-    font-size: 4em; 
+.main-content h1{
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
+    font-size: 100px;
     color: #ff69b4;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
-    background: linear-gradient(to right, #ff69b4, #ff6347, #ffd700, #adff2f, #00ced1, #1e90ff, #9370db);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #ff69b4, #ff6347, #ffd700, #adff2f, #00ced1, #1e90ff, #9370db );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rainbow 5s infinite;
 }
-
-.header-content h1,
-.header-content p {
+.main-content p{
     margin: .5rem 0;
-}
-
-nav ul {
-    list-style: none;
-    font-size: large;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav {
-    position: absolute;
-    padding: 15px 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-/*
-nav ul li a{
-    text-decoration: none;
+    font-size: 24px;
+    padding-bottom: 20px;
     color: #333;
-    transition: color 0.3s ease, transform 0.3s ease;
 }
-nav ul li a:hover{
-    color: #ff69b4;
+button{
+    padding: 15px 30px;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(181, 176, 176);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, trasnform 0.3s ease;
+    margin: 15px;
+}
+button:hover{
+    background-color: #00aced;
     transform: scale(1.1);
-} 
-
-
-footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    margin-top: 20px;
 }
-Button{
-    Add pointer
-    Add a hover that it fills it up with a color
-    make button bigger
-    increase the padding top
-    
-
-}
-*/
