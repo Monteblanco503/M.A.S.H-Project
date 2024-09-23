@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.A.S.H Game</title>
+    <!-- CSS links for Footer, Header, Index.css -->
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <!-- Add bootstrap link here -->
 </head>
 <body class="mash-page">
     <header class="header-background">
         <nav>
+            <!-- Add logo to the top left of the page -->
             <div class="logo-container">
                 <a href="index.html"><img src="path/to/logo.png" alt="M.A.S.H logo"></a>
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="instructions.html">Instructions</a></li>
-                <li><a href="game.html">Play Now</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="./pages/instructions.html">Instructions</a></li>
+                <li><a href="./pages/game.html">Play Now</a></li>
+                <li><a href="./pages/contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="header-content">
@@ -30,31 +34,34 @@
     </header>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-2 offset-1">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="instructions.html">Instructions</a></li>
-                        <li><a href="game.html">Play Now</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-sm-5 text-center">
-                    <h5>Social</h5>
-                    <a href="http://instagram.com/">Instagram</a>
-                    <a href="http://facebook.com/">Facebook</a>
-                    <a href="http://twitter.com/">Twitter</a>
-                    <a href="http://youtube.com/">YouTube</a>
-                </div>
-                <div class="col-sm-4 text-center">
-                    Email: 
-                </div>
+        <!-- Logo to left side -->
+         <div class="footer-content">
+            <div class="footer-left">
+                <img src="" alt="Logo" class="footer-logo">
             </div>
-        </div>
+            <!-- Middle; Navigation -->
+             <div class="footer-center">
+                <nav class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="./pages/instructions.html">Instructions</a>
+                    <a href="./pages/game.html">Play Now</a>
+                    <a href="./pages/contact.html">Contact</a>
+                </nav>
+             </div>
+             <!-- Right; Scoial Media and Contact info -->
+             <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+                <div class="contact-info">
+                    <p> Email: <a href="mailto:michaelthomas.pdx@gmail.com">michaelthomas.pdx@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+123456789"></a>+1 234 657 89</p>
+                </div>
+             </div>
+         </div>
     </footer>
-    <!-- JavaScript link -->
     <script src="./javascript/index.js"></script>
 </body>
 </html>

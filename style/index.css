@@ -1,4 +1,4 @@
-/* Custom styles for the MASH game page */
+/* Custom styles for the MASH game page 
 .mash-page {
     padding-top: 60px;
 }
@@ -64,14 +64,13 @@ nav ul li a:hover{
     color: #ff69b4;
     transform: scale(1.1);
 } 
-*/
+
 
 footer {
     background-color: #f8f9fa;
     padding: 20px 0;
     margin-top: 20px;
 }
-/*
 Button{
     Add pointer
     Add a hover that it fills it up with a color

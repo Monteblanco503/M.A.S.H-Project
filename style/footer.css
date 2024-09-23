@@ -1,0 +1,65 @@
+/* General footer styling */
+footer {
+    background-color: #222; /* Dark background for contrast */
+    color: #fff; /* Text color */
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Ensure left, center, and right are spaced out */
+    align-items: center; /* Align content vertically */
+    max-width: 1200px;
+    margin: 0 auto; /* Center footer content */
+}
+
+/* Left section: Logo */
+.footer-left img.footer-logo {
+    width: 150px; /* Adjust size of the logo */
+}
+
+/* Center section: Navigation */
+.footer-center nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-center nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-center nav a:hover {
+    text-decoration: underline;
+    color: #00aced;
+}
+
+/* Right section: Social media and contact */
+.footer-right {
+    text-align: right;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #00aced; /* Change color on hover */
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
