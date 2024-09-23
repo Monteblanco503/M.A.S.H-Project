@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.A.S.H Game</title>
-    <!-- Add Bootstrap and CSS file -->
-    <!-- Insert Boxicons CSS link here-->
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body class="mash-page">
     <header class="header-background">
         <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="path/to/logo.png" alt="M.A.S.H logo"></a>
+            </div>
             <ul>
-                <!-- 
-                    IDEA?? Insert logo top left and link to home page                 
-                -->
                 <li><a href="index.html">Home</a></li>
-                <li><a href="">Instructions</a></li>
-                <li><a href="">Play Now</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="instructions.html">Instructions</a></li>
+                <li><a href="game.html">Play Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="header-content">
@@ -25,68 +24,37 @@
             <p>Mansion Apartment Shack House</p>
         </div>
         <div>
-            <!-- Add two buttons: 
-                    1) Learn how to play
-                    2) Play game or Start Game or Start Match    
-                    
-                    Also consider adding adding eventListeners to buttons for better user experience 
-            -->
-            <button type="button"><a href="">Start Game!</a></button>
-            <!-- eventListern vs ahref = 
-                a href: Essentially makes it act as a clickable link to the page you want, this si straighforward
-                for navigation but doens't allow for complex interaction.
-                
-                eventListener: A way to attach a Js fucntion that executes when a specific even occurs (lik a click).
-                This allows you to perform more complex actions
-
-            -->
+            <button id="startGame-btn" type="button" aria-label="Start Game">Start Game!</button>
+            <button id="tutorial-btn" type="button" aria-label="Learn How to Play">Learn How to Play</button>
         </div>
     </header>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="instructions.html">Instructions</a></li>
+                        <li><a href="game.html">Play Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a href="http://instagram.com/">Instagram</a>
+                    <a href="http://facebook.com/">Facebook</a>
+                    <a href="http://twitter.com/">Twitter</a>
+                    <a href="http://youtube.com/">YouTube</a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    Email: 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript link -->
+    <script src="./javascript/index.js"></script>
 </body>
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-4 col-sm-2 offset-1">
-                <h5>Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="">Instructions</a></li>
-                    <li><a href="">Play Now</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-sm-5 text-center">
-                <h5>Social</h5>
-        <!-- Insert icons from Boxicons using <i>      
-            <div class="media-buttons">
-                <a href="#" style="background: #4267b2;" class="link">
-                    <i class='bx bxl-facebook'></i>
-                </a>
-                <a href="#" style="background: #1da1f2;" class="link">
-                    <i class='bx bxl-twitter'></i>
-                </a>
-                <a href="#" style="background: #e1306c;" class="link">
-                    <i class='bx bxl-instagram'></i>
-                </a>
-                <a href="#" style="background: #ff0000;" class="link">
-                    <i class='bx bxl-youtube'></i>
-                </a>
-            </div>
-        -->
-                <a href="http://instagram.com/">Instagram</a>
-                <a href="http://facebook.com/">Facebook</a>
-                <a href="http://twitter.com/">Twitter</a>
-                <a href="http://youtube.com/">YouTube</a>
-            </div>
-            <div class="col-sm-4 text-center">
-                <!-- 
-                    IDEA??? Add button for people to message you instead of lisitng email 
-                    Maybe a button to subscribe???
-                 -->
-                Email: 
-            </div>
-       </div>
-    </div>
-</footer>
 </html>
