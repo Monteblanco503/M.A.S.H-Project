@@ -2,10 +2,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Page</title>
 
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/contact.css">
+
+    <!-- Boxicons link for social media -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- Header Section -->
@@ -13,7 +17,7 @@
         <nav>
             <!-- Logo -->
             <div class="logo-container">
-                <a href="index.html"><img src="" alt="M.A.S.H logo"></a>
+                <a href="../index.html"><img src="../images/Puff Pepper Logo.JPG" alt="M.A.S.H logo"></a>
             </div>
             
             <!-- Navigation Links -->
@@ -30,34 +34,63 @@
             </div>
         </nav>
     </header>
-    <footer>
-        <!-- Logo to left side -->
-         <div class="footer-content">
-            <div class="footer-left">
-                <img src="" alt="Logo" class="footer-logo">
+
+    <main>
+        <div id="profile-card">
+            <div id="image">
+                <img src="../images/Michael.Thomas.jpeg" alt="Profile" class="profile-img">
             </div>
-            <!-- Middle; Navigation -->
-             <div class="footer-center">
+            <div id="text-data">
+                <span class="name">Nucamp Graduate</span>
+                <span class="job">Front-End Web Developer</span>
+            </div>
+            <div class="media-buttons">
+                <a href="#" style="background: #4267b2;" class="link">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="#" style="background: #1da1f2;" class="link">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="#" style="background: #e1306c;" class="link">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="#" style="background: #ff0000;" class="link">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+            </div>
+            <div class="buttons">
+                <button id="subscribeBtn" class="button">Subscribe</button>
+                <button id="messageBtn" class="button">Message</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="../images/Puff Pepper Logo.JPG" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-center">
                 <nav class="footer-nav">
                     <a href="../index.html">Home</a>
                     <a href="instructions.html">Instructions</a>
                     <a href="game.html">Play Now</a>
                     <a href="contact.html">Contact</a>
                 </nav>
-             </div>
-             <!-- Right; Scoial Media and Contact info -->
-             <div class="footer-right">
+            </div>
+            <div class="footer-right">
                 <div class="social-links">
                     <a href="https://facebook.com" target="_blank">Facebook</a>
                     <a href="https://twitter.com" target="_blank">Twitter</a>
                     <a href="https://instagram.com" target="_blank">Instagram</a>
                 </div>
                 <div class="contact-info">
-                    <p> Email: <a href="mailto:michaelthomas.pdx@gmail.com">michaelthomas.pdx@gmail.com</a></p>
-                    <p>Phone: <a href="tel:+123456789"></a>+1 234 657 89</p>
+                    <p>Email: <a href="mailto:michaelthomas.pdx@gmail.com">michaelthomas.pdx@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+123456789">+1 234 657 89</a></p>
                 </div>
-             </div>
-         </div>
+            </div>
+        </div>
     </footer>
+    <script src="../javascript/contact.js"></script>
 </body>
 </html>

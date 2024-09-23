@@ -1,23 +1,26 @@
-/*
-    I want this to be taking care of the logo in each page as well as the navigation
-*/
 .header-background {
-    background-color: #f8f9fa; /* Light shade for uniformity */
+    background-color: #f8f9fa; 
     padding: 10px 20px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Align items */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
 }
 
 .logo-container {
     flex: 1;
 }
 
+.logo-container img {
+    max-width: 100px; /* Sets a max width for responsiveness */
+    height: auto; /* Maintains the aspect ratio */
+}
+
 .nav-links {
-    flex: 2; /* Adjust to center navigation */
+    flex: 3; /* Gives more space to the navigation */
     display: flex;
     justify-content: center;
     list-style-type: none;
@@ -30,16 +33,32 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #333; /* Default text color */
-    transition: color 0.3s; /* Smooth transition */
+    color: #333; 
+    transition: color 0.3s;
+    font-weight: bold; /* Makes links more prominent */
 }
 
 .nav-links a:hover {
-    color: #00aced; /* Hover color */
+    color: #00aced; 
 }
 
 .header-right {
-    flex: 1; /* Optional: adjust space as needed */
-    text-align: right; /* Align to the right */
-    color: #333; /* Adjust text color */
+    flex: 1; 
+    text-align: right; 
+    color: #333; 
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stacks links vertically on smaller screens */
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .logo-container img {
+        max-width: 80px; /* Adjust logo size on smaller screens */
+    }
 }

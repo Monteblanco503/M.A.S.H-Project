@@ -1,41 +1,61 @@
-.mash-page{
-    padding-top: 60px;
-    background-color: #fff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.main-content{
+
+body {
+    background-color: #fff;
+    color: #333; 
+
+.mash-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: ;
+    padding-top: 60px; 
+    background-color: #fff; 
+    min-height: calc(100vh - 120px); 
+}
+
+.main-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
-.main-content h1{
+
+.main-content h1 {
     font-family: 'Bubblegum Sans', cursive, sans-serif;
     font-size: 100px;
     color: #ff69b4;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(to right, #ff69b4, #ff6347, #ffd700, #adff2f, #00ced1, #1e90ff, #9370db );
+    background: linear-gradient(to right, #ff69b4, #ff6347, #ffd700, #adff2f, #00ced1, #1e90ff, #9370db);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rainbow 5s infinite;
 }
-.main-content p{
+
+.main-content p {
     margin: .5rem 0;
     font-size: 24px;
     padding-bottom: 20px;
     color: #333;
 }
-button{
+
+button {
     padding: 15px 30px;
     font-size: large;
     border: none;
     border-radius: 5px;
-    background-color: rgb(181, 176, 176);
+    background-color: rgb(181, 176, 176); 
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease, trasnform 0.3s ease;
-    margin: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 15px; 
 }
-button:hover{
-    background-color: #00aced;
+
+button:hover {
+    background-color: #00aced; 
     transform: scale(1.1);
 }

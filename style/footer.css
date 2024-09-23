@@ -1,65 +1,46 @@
 /* General footer styling */
 footer {
-    background: #f8f9fa;
-    color: #333; /* Text color */
-    padding: 20px 0;
+    background: #f8f9fa; 
+    color: #333; 
+    padding: 20px 20px; /* Adjusted to match header padding */
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Ensure left, center, and right are spaced out */
-    align-items: center; /* Align content vertically */
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; /* For better responsiveness */
     max-width: 1200px;
-    margin: 0 auto; /* Center footer content */
+    margin: 0 auto; 
 }
 
-/* Left section: Logo */
+.footer-left {
+    flex: 1;
+}
+
 .footer-left img.footer-logo {
-    width: 150px; /* Adjust size of the logo */
+    max-width: 100px; /* Matches the logo size in the header */
+    height: auto; /* Keeps aspect ratio */
 }
 
-/* Center section: Navigation */
+.footer-center {
+    flex: 3; /* Matches the navigation space in the header */
+}
+
 .footer-center nav {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between nav links */
 }
 
 .footer-center nav a {
     color: #333;
     text-decoration: none;
     font-size: 16px;
+    font-weight: bold; /* Adds consistency with the header links */
+    transition: color 0.3s;
 }
 
 .footer-center nav a:hover {
     text-decoration: underline;
-    color: #00aced;
-}
-
-/* Right section: Social media and contact */
-.footer-right {
-    text-align: right;
-}
-
-.social-links a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: #00aced; /* Change color on hover */
-}
-
-.contact-info p {
-    margin: 5px 0;
-}
-
-.contact-info a {
-    color: #333;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
+    color: #00aced; /*
