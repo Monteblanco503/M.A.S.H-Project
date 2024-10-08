@@ -1,15 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+body {
     font-family: sans-serif;
     background: linear-gradient(#fff, #78abff);
     min-height: 100vh;
     padding: 150px 0;
     box-sizing: border-box;
 }
-.newsletter{
+.newsletter {
     background: #0c5adb;
     margin: 0 auto;
     text-align: center;
@@ -18,20 +18,20 @@ body{
     border-radius: 5px;
     color: #fff;
 }
-.newsletter hr{
+.newsletter hr {
     width: 70px;
     height: 3px;
     margin: 30px auto;
     border: 0;
     background: rgba(255, 255, 255, 0.5);
 }
-.newsletter p{
+.newsletter p {
     font-size: 16px;
     line-height: 24px;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 30px;
 }
-.newsletter input{
+.newsletter input {
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -44,10 +44,18 @@ body{
     box-sizing: border-box;
     font-size: 16px;
 }
-::placeholder{
+::placeholder {
     color: rgba(255, 255, 255, 0.8);
 }
-.newsletter button{
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; 
+    align-items: center;
+}
+.newsletter button {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 3px;
     height: 50px;
@@ -57,8 +65,22 @@ body{
     cursor: pointer;
     transition: 0.5s;
     font-size: 16px;
+    width: 45%; 
+    box-sizing: border-box;
 }
-.newsletter button:hover{
+
+.newsletter button:hover {
     background-color: #00138e;
     border-color: #00138e;
+}
+
+
+.cancel-btn {
+    background-color: red;
+    border-color: red;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+    border-color: #c82333;
 }
