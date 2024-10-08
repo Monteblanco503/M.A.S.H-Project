@@ -6,6 +6,37 @@
 
     <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            padding: 20px;
+        }
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .list-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            flex: 1 0 30%; /* Flex basis of 30% to fit 3 in a row */
+            max-width: 30%; /* Ensure no more than 3 in a row */
+        }
+        @media (max-width: 767px) {
+            .list-box {
+                flex: 1 0 45%; /* Flex basis of 45% to fit 2 in a row on smaller screens */
+                max-width: 45%;
+            }
+        }
+        .selected-option {
+            font-weight: bold;
+            background-color: #28a745; /* Green background color */
+        }
+    </style>
+
 </head>
 <body>
     <!-- Header Section -->
@@ -26,16 +57,90 @@
     
             <!-- Right side -->
             <div class="header-right">
-                <p>Your Fun Tagline Here!</p>
+                <p>Your future, decided with a twist!</p>
             </div>
         </nav>
     </header>
+    <main>
+        <div class="container">
+            <h1 class="text-center">MASH Game</h1>
+            <form id="mashForm">
+                <div class="form-group">
+                    <label for="mashOptions">Home Options (Mansion, Apartment, Shack, House)</label>
+                    <input type="text" class="form-control" id="mashOptions" value="Mansion, Apartment, Shack, House" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="spouseOptions">Spouse Options (comma-separated)</label>
+                    <input type="text" class="form-control" id="spouseOptions" value="Alice, Bob, Charlie, Dana">
+                </div>
+                <div class="form-group">
+                    <label for="numChildrenOptions">Number of Children Options (comma-separated)</label>
+                    <input type="text" class="form-control" id="numChildrenOptions" value="0, 1, 2, 3, 4, 5">
+                </div>
+                <div class="form-group">
+                    <label for="jobOptions">Job Options (comma-separated)</label>
+                    <input type="text" class="form-control" id="jobOptions" value="Engineer, Doctor, Artist, Teacher">
+                </div>
+                <div class="form-group">
+                    <label for="carOptions">Car Options (comma-separated)</label>
+                    <input type="text" class="form-control" id="carOptions" value="Tesla, BMW, Honda, Ford">
+                </div>
+                <button type="button" class="btn btn-primary" id="showPossibleFuturesBtn" onclick="showPossibleFutures()">Show Possible Futures: 0</button>
+            </form>
+            <h2 id="futureSummary" class="text-center mt-4"></h2>
+            <h2 class="text-center mt-4">Possible Futures</h2>
+            <div id="possibleFutures" class="list-container"></div>
+        </div>
+    
+        <script>
+            let futureNumber;
+            let optionsList = [];
+            let counter = 0;
+    
+            function showPossibleFutures() {
+                counter++;
+                document.getElementById('showPossibleFuturesBtn').innerText = `Show Possible Futures: ${counter}`;
+    
+                const mashOptions = document.getElementById('mashOptions').value.split(',').map(item => item.trim());
+                const spouseOptions = document.getElementById('spouseOptions').value.split(',').map(item => item.trim());
+                const numChildrenOptions = document.getElementById('numChildrenOptions').value.split(',').map(item => item.trim());
+                const jobOptions = document.getElementById('jobOptions').value.split(',').map(item => item.trim());
+                const carOptions = document.getElementById('carOptions').value.split(',').map(item => item.trim());
+    
+                function createList(options, title) {
+                    let list = `<div class="list-box"><h3>${title}</h3><ul class="list-group">`;
+                    const randomIndex = Math.floor(Math.random() * options.length);
+                    options.forEach((option, index) => {
+                        const className = index === randomIndex ? 'selected-option' : '';
+                        list += `<li class="list-group-item ${className}">${option}</li>`;
+                    });
+                    list += `</ul></div>`;
+                    return list;
+                }
+    
+                const possibleFutures = `
+                    ${createList(mashOptions, 'Home')}
+                    ${createList(spouseOptions, 'Marry')}
+                    ${createList(numChildrenOptions, 'Kids')}
+                    ${createList(jobOptions, 'Job')}
+                    ${createList(carOptions, 'Car')}
+                `;
+                document.getElementById('possibleFutures').innerHTML = possibleFutures;
+    
+                const selectedOptions = document.querySelectorAll('.selected-option');
+                let summary = 'Future: ';
+                selectedOptions.forEach(option => {
+                    summary += `${option.textContent}, `;
+                });
+                summary = summary.slice(0, -2); // Remove the trailing comma and space
+                document.getElementById('futureSummary').textContent = summary;
+            }
+        </script>
+    
+        
+    </main>
     <footer>
-        <!-- Logo to left side -->
-         <div class="footer-content">
-            <div class="footer-left">
-                <img src="../images/Puff Pepper Logo.JPG" alt="Logo" class="footer-logo">
-            </div>
+        
             <!-- Middle; Navigation -->
              <div class="footer-center">
                 <nav class="footer-nav">
@@ -53,8 +158,8 @@
                     <a href="https://instagram.com" target="_blank">Instagram</a>
                 </div>
                 <div class="contact-info">
-                    <p> Email: <a href="mailto:michaelthomas.pdx@gmail.com">michaelthomas.pdx@gmail.com</a></p>
-                    <p>Phone: <a href="tel:+123456789"></a>+1 234 657 89</p>
+                    <p>Email: <a href="mailto:michaelthomas.pdx@gmail.com">michaelthomas.pdx@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+123456789">+1 234 657 89</a></p>
                 </div>
              </div>
          </div>

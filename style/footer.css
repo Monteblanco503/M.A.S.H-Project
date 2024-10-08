@@ -13,16 +13,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto; 
 }
-
-.footer-left {
-    flex: 1;
-}
-
-.footer-left img.footer-logo {
-    max-width: 100px; /* Matches the logo size in the header */
-    height: auto; /* Keeps aspect ratio */
-}
-
 .footer-center {
     flex: 3; /* Matches the navigation space in the header */
 }
